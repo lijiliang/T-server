@@ -2,9 +2,14 @@
     @description 路由
  */
 const router = require('koa-router')();
+const setting = require('./setting');
+const controller = require('./controlles');
 
 module.exports = (app)=>{
     app.use(router.routes());
+
+    //设置控制器
+    controller(router);
 
     return function *(next){
         console.log(this.request.url,this.status)
