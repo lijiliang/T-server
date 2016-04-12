@@ -18,7 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/lijiliang/T-server.git"
   },
-  "author": "lijiliang",
+  "author": {
+    "name": "lijiliang",
+    "email": "1951828835@qq.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lijiliang/T-server/issues"
