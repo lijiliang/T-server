@@ -3,7 +3,7 @@
  */
 const router = require('koa-router')();
 const setting = require('./setting');
-const controller = require('./controlles');
+const controller = require('./controller');
 
 module.exports = (app)=>{
     app.use(router.routes());
