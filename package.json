@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/lijiliang/T-server/issues"
   },
-  "homepage": "https://github.com/lijiliang/T-server#readme"
+  "homepage": "https://github.com/lijiliang/T-server#readme",
+  "devDependencies": {
+    "log4js": "^1.0.1"
+  }
 }
