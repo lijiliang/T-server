@@ -1,26 +1,33 @@
 /*
     controller
  */
-const _ = require('lodash');
+// const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
-const setting = require('./setting')
+const setting = require('./setting');
 
 const _controllerPath = '../'+ setting.path.controller +'/';
 
-
-var controllerMain = {
-    init: (router)=>{
-        var _self = controllerMain;
+const controllerMain = {
+    init: (router) => {
+        const _self = controllerMain;
         //首页
-        router.get('/', function*(){
+        router.get('/', function* (){
             yield _self.runController.bind(this)('index');
+        });
+        //用户中心
+        router.get('/user', function* (){
+            yield _self.runController.bind(this)('user');
+        });
+        //用户中心
+        router.get('/users', function* (){
+            yield _self.runController.bind(this)('users');
         });
     },
     runController: function* (name){
-        var _self = controllerMain;
+        const _self = controllerMain;
         try{
-            var controller = _self.getContrller(name);
+            const controller = _self.getContrller(name);
             yield controller.bind(this)();
         }catch(e){
             console.log(e);
@@ -30,11 +37,11 @@ var controllerMain = {
     /*
      * @description 获取控制器
      */
-    getContrller: (name)=>{
-        var _path = _controllerPath+name+'.js';
+    getContrller: (name) => {
+        const _path = _controllerPath+name+'.js';
 
         //转换文件绝对路径
-        var filePath = path.resolve(__dirname,_path);
+        const filePath = path.resolve(__dirname,_path);
 
         //判断文件是否存在
         if(fs.existsSync(filePath)){
