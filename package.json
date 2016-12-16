@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/lijiliang/T-server#readme",
   "devDependencies": {
+    "koa-static": "^2.0.0",
     "log4js": "^1.0.1"
   }
 }
