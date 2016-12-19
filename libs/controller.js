@@ -16,8 +16,12 @@ const controllerMain = {
             yield _self.runController.bind(this)('index');
         });
         //用户中心
-        router.get('/user', function* (){
+        router.get('/user/:id', function* (){
             yield _self.runController.bind(this)('user');
+        });
+
+        router.get('/user/index', function* (){
+            yield _self.runController.bind(this)('user/index');
         });
         //用户中心
         router.get('/users', function* (){
