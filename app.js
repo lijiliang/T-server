@@ -1,3 +1,7 @@
+/**
+ * [app.js 程序启动入口]
+ * @time 2016-11-28
+ */
 const app     = require('koa')();
 const favicon = require('koa-favicon');
 const session = require('koa-session');
@@ -7,8 +11,8 @@ const config     = require('./config');
 const middleware = require('./libs/middleware');
 const router     = require('./libs/router');
 const path = require('path');
-
 const log4js = require('log4js');
+
 log4js.configure({
     appenders: [
         { type: 'console' , layout: { type : 'basic' } }
