@@ -23,6 +23,14 @@ const controllerMain = {
         router.get('/users', function* (){
             yield _self.runController.bind(this)('users');
         });
+
+        //404
+        router.get('/404', function* (){
+            yield _self.runController.bind(this)('bad');
+        });
+        router.get('*',function* (){
+            yield _self.runController.bind(this)('bad');
+        });
     },
     runController: function* (name){
         const _self = controllerMain;

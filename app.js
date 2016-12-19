@@ -8,11 +8,10 @@ const middleware = require('./libs/middleware');
 const router     = require('./libs/router');
 const path = require('path');
 
-
 const log4js = require('log4js');
 log4js.configure({
     appenders: [
-        { type: 'console',layout:{type:'basic'} }
+        { type: 'console' , layout: { type : 'basic' } }
     ],
     replaceConsole:true
 });
