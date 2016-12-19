@@ -1,7 +1,7 @@
 /*
     @description 路由
  */
-const router = require('koa-router')();
+const router = require('koa-router')();   // koa路由设置
 const setting = require('./setting');
 const controller = require('./controller');
 
