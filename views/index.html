@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <base target="_self">
+    <title>T-server 首页测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <script>
+        (function(doc, win) {
+            var doc = document;
+            var win = window;
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                var fZ = 100 * (clientWidth / 750);
+                if (fZ >= 100) {
+                    docEl.style.fontSize = 100 + 'px';
+                } else if (fZ <= 42) {
+                    docEl.style.fontSize = 42 + 'px';
+                } else {
+                    docEl.style.fontSize = fZ + 'px';
+                }
+            };
+            recalc();
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-    <%= seo_info.title %>
-    <%list.map((item,index)=>{ %>
-        <div>
-            <%=item%>
+    <div id="app">
+        <header class="header header-flex">
+            <h1 class="title">node抓取cNode首页数据</h1>
+        </header>
+        <div class="container">
+            <ul>
+                <%list.map((item, index)=>{%>
+                <li data-url="<%=item.avatar%>" class="item">
+                    <div class="item-user-bar">
+                        <div class="avatar-cover avatar-loaded">
+                            <div class="avatar" style="background-image: url('<%-item.avatar%>')"></div>
+                        </div>
+                        <div class="item-detail"><span class="username"><%=item.userName%></span>
+                            <p class="item-time">
+                                <%=item.lastTime%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <a href="https://cnodejs.org<%=item.href%>" class="item-link">
+                            <p class="item-content-title"><%=item.title%></p>
+                        </a>
+                    </div>
+                </li>
+                <%})%>
+            </ul>
         </div>
-    <% }) %>
+    </div>
     <script src="js/index.js"></script>
 </body>
+
 </html>

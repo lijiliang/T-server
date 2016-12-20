@@ -70,8 +70,13 @@ rules: #规则
     no-useless-constructor: 0 #class 里使用 constructor必须先定义
     max-len: 0 #检测每行最大长度  默认80  这里取消是因为jsx里面一行通常很长
     no-unused-vars: 1 #不允许定义变量却未使用
+    import/newline-after-import: 0 #引入模块后需要新一行（空的）  这里取消验证
+    dot-notation: 0 #要求使用点号，对象的属性使用中要 obj.a 而不是obj['a'] 这里取消验证
+    guard-for-in: 0 #要求 for-in 循环中有一个 if 语句 这里取消验证
+
     react/jsx-uses-vars: 2 #react 中使用变量
     react/prefer-es6-class: 1
+
     # require-jsdoc: #要求使用jsdoc注释
     #     - 2
     #     - require:
@@ -92,6 +97,8 @@ rules: #规则
     jsdoc/require-param-type: 1 ##参数类型(必写，如果有参数情况下)
     jsdoc/require-returns-description: 0  #注释中要填写@returns 描述 这里取消
     jsdoc/require-returns-type: 1 #@returns 类型 必写
+
+    object-curly-spacing: 0  #强制在花括号中使用一致的空格 这里取消验证
 globals: #全局变量
     React: true
     ReactDOM: true
