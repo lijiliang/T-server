@@ -34,7 +34,6 @@ T-server 是基于kao搭建的web项目小框架
 ## node
 - 服务、路由、中间件、ejs模板、日志、静态文件
 
-
 疑问：
 - koa的中间件机制是如何实现的？
 - 为什么中间件必须是generator function?
