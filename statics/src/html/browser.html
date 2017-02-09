@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%-title%></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: '微软雅黑', '宋体', arial, tahoma, verdana;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #444;
+        }
+        html {
+            background: #eaf2f7;
+        }
+        a {
+            text-decoration: none;
+        }
+        .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -300px 0 0 -500px;
+            width: 1000px;
+            height: 600px;
+            padding-top: 50px;
+        }
+        .alert {
+            margin: 0 auto;
+            width: 720px;
+            height: 150px;
+        }
+        .warning {
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin-right: 30px;
+            margin-bottom: 100px;
+            margin-top: 15px;
+        }
+        .notice {
+            float: left;
+            padding-top: 20px;
+        }
+        .f40 {
+            font-size: 40px;
+        }
+        .f20 {
+            font-size: 20px;
+        }
+        .browser-logo {
+            width: 150px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .browser-logo img{
+            border:none;
+        }
+        .browser-list {
+            clear: both;
+        }
+        .browser-list li {
+            float: left;
+            margin: 0 5px;
+            list-style: none;
+            width: 150px;
+            height: 200px;
+            text-align: center;
+        }
+        .browser-list li .browser-name {
+            line-height: 50px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert">
+            <div class="warning">
+                <img src="<%=init_img('browser/warning.png')%>" alt="">
+            </div>
+            <div class="notice">
+                <p class="f40">嘿!您的的浏览器版本太旧了</p>
+                <p class="f20">为了获得更好的体验，推荐您下载下列更优秀的浏览器 :)</p>
+            </div>
+        </div>
+        <div class="browser-list">
+            <ul>
+                <li>
+                    <a href="http://www.chromeliulanqi.com/">
+                        <div class="browser-logo chrome">
+                            <img src="<%=init_img('browser/chrome.png')%>" />
+                        </div>
+                        <div class="browser-name">Google Chrome</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mozilla.org/zh-CN/firefox/new/?utm_medium=referral&utm_source=firefox-com">
+                        <div class="browser-logo firefox">
+                            <img src="<%=init_img('browser/firefox.png')%>" />
+                        </div>
+                        <div class="browser-name">FireFox</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://se.360.cn/">
+                        <div class="browser-logo b360">
+                            <img src="<%=init_img('browser/360.png')%>" />
+                        </div>
+                        <div class="browser-name">360浏览器</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.opera.com/zh-cn">
+                        <div class="browser-logo opera">
+                            <img src="<%=init_img('browser/opera.png')%>" />
+                        </div>
+                        <div class="browser-name">Opera</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.apple.com/cn/safari/">
+                        <div class="browser-logo safari">
+                            <img src="<%=init_img('browser/safari.png')%>" />
+                        </div>
+                        <div class="browser-name">Safari</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://support.microsoft.com/zh-cn/help/18520/download-internet-explorer-11-offline-installer">
+                        <div class="browser-logo ie11">
+                            <img src="<%=init_img('browser/ie11.png')%>" />
+                        </div>
+                        <div class="browser-name">Internet Explorer 11</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

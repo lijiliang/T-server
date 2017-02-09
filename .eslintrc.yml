@@ -70,7 +70,13 @@ rules: #规则
     no-useless-constructor: 0 #class 里使用 constructor必须先定义
     max-len: 0 #检测每行最大长度  默认80  这里取消是因为jsx里面一行通常很长
     no-unused-vars: 1 #不允许定义变量却未使用
+    no-cond-assign: 0 #禁止在条件语句中出现赋值操作符  这里取消验证
+    no-restricted-syntax: 0 #禁止使用特定的语法 这里取消验证
     import/newline-after-import: 0 #引入模块后需要新一行（空的）  这里取消验证
+    import/no-extraneous-dependencies: #使用require时分析package.json 一般只 require('lodash') 这样的情况，默认是分析package.json 的dependencies
+        - 2
+        - 
+            devDependencies: true #开启devDependencies 的支持
     dot-notation: 0 #要求使用点号，对象的属性使用中要 obj.a 而不是obj['a'] 这里取消验证
     guard-for-in: 0 #要求 for-in 循环中有一个 if 语句 这里取消验证
 
@@ -98,7 +104,14 @@ rules: #规则
     jsdoc/require-returns-description: 0  #注释中要填写@returns 描述 这里取消
     jsdoc/require-returns-type: 1 #@returns 类型 必写
 
+
+    ###针对node start
+    require-yield: 0 #禁用函数内没有yield的 generator 函数 因为在使用koa时 yield 被抽离到公共，所以这里取消验证
+    generator-star-spacing: 0 #强制 generator 函数中 * 号周围有空格 这里取消验证
     object-curly-spacing: 0  #强制在花括号中使用一致的空格 这里取消验证
+    global-require: 0 #强制在模块顶部调用 这里取消验证
+    import/no-dynamic-require: 0 #禁止使用动态请求 require(mod)//mod 为变量  这种情况是不允许的，所以这里取消验证
+    ###针对node end
 globals: #全局变量
     React: true
     ReactDOM: true

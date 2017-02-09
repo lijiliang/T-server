@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <base target="_self">
 <title><%=title%></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -16,22 +13,3 @@
     window.location.href="/browser";
 </script>
 <![endif]-->
-
-    <%-init_css('antd.css,index.css')%>
-</head>
-<body>
-    <div id="index"></div>
-    <%-init_js('jquery.js,react.js,antd.js,common.js')%>
-<script type="text/javascript">
-    var _ie = window.navigator.userAgent;
-    var agentID = _ie.match(/(MSIE 9.0|MSIE 8.0|MSIE 7.0)/i);
-    if(agentID){
-        window.location.href="/browser";
-    }
-
-    var memberInfo=<%-JSON.stringify(memberInfo)%>;
-</script>
-
-    <%-init_js('index.js')%>
-</body>
-</html>
