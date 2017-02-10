@@ -12,7 +12,7 @@ const viewPath = '../' + setting.path.view;
 
 module.exports = function(data, tpl, status){
     const file = path.join(__dirname, viewPath, tpl+'.html');
-    var _html;
+    let _html = null;
     _.extend(this._data, data);
     this.status = status || 200;
     _html = ejs.render(fs.readFileSync(file).toString(), this._data);

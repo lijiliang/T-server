@@ -10,28 +10,45 @@
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="renderer" content="webkit|ie-stand">
-<!--[if lte IE 9]>
-<%-init_js('modernizr.js,ie.js')%>
-<script>
-    window.location.href="/browser";
-</script>
-<![endif]-->
 
-    <%-init_css('antd.css,index.css')%>
 </head>
-<body>
-    <div id="index"></div>
-    <%-init_js('jquery.js,react.js,antd.js,common.js')%>
-<script type="text/javascript">
+<body> 
+    <!-- <div id="index"></div> -->
+    <div id="app">
+        <header class="header header-flex">
+            <h1 class="title">node抓取cNode首页数据</h1>
+        </header>
+        <div class="container">
+            <ul>
+                <%list.map((item, index)=>{%>
+                <li data-url="<%=item.avatar%>" class="item">
+                    <div class="item-user-bar">
+                        <div class="avatar-cover avatar-loaded">
+                            <div class="avatar" style="background-image: url('<%-item.avatar%>')"></div>
+                        </div>
+                        <div class="item-detail"><span class="username"><%=item.userName%></span>
+                            <p class="item-time">
+                                <%=item.lastTime%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <a href="https://cnodejs.org<%=item.href%>" class="item-link">
+                            <p class="item-content-title"><%=item.title%></p>
+                        </a>
+                    </div>
+                </li>
+                <%})%>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
     var _ie = window.navigator.userAgent;
     var agentID = _ie.match(/(MSIE 9.0|MSIE 8.0|MSIE 7.0)/i);
     if(agentID){
         window.location.href="/browser";
     }
-
-    var memberInfo=<%-JSON.stringify(memberInfo)%>;
 </script>
 
-    <%-init_js('index.js')%>
 </body>
 </html>
