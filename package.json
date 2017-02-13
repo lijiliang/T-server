@@ -10,8 +10,6 @@
     "dev": "gulp dev --colors",
     "core:dev": "gulp core:dev --colors",
     "core:build": "gulp core:build --colors",
-    "antd:dev": "gulp antd:dev --colors",
-    "antd:build": "gulp antd:build --colors"
   },
   "repository": {
     "type": "git",
