@@ -24,7 +24,7 @@ const logger = log4js.getLogger('app');
 app.keys = 'T-server'; //设置签名cookie密钥，在进行cookie签名时，只有设置signed为true的时候，才会使用密钥进行加密
 
 app
-    .use(staticServer(path.join(__dirname,'/public')))    // koa静态文件指定
+    .use(staticServer(path.join(__dirname,'/statics')))    // koa静态文件指定
     .use(favicon(path.join(__dirname,'/favicon.ico')))
     .use(session(app))
     .use(middleware())
