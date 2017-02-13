@@ -28,6 +28,14 @@ module.exports = () => {
                 const _isDebug = this.isDebug();
                 return helper.init_css(cssList,_isDebug);
             },
+            init_js: function(jsList){
+                const _isDebug = this.isDebug();
+                return helper.init_js(jsList,_isDebug);
+            },
+            init_img: function(imgName){
+                const _isDebug = this.isDebug();
+                return helper.init_img(imgName,_isDebug);
+            },
         };
         //渲染模板方法
         this.render = tpl;

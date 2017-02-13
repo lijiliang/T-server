@@ -9,7 +9,7 @@
     "build": "gulp build --colors",
     "dev": "gulp dev --colors",
     "core:dev": "gulp core:dev --colors",
-    "core:build": "gulp core:build --colors",
+    "core:build": "gulp core:build --colors"
   },
   "repository": {
     "type": "git",

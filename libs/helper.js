@@ -75,6 +75,48 @@ exports.init_css = function(cssList, isDebug){
     return _cssLinks;
 };
 
+/**
+ * 构造js 资源路径
+ * @param {string} jsList js列表
+ * @example
+ * init_js('jquery.js,react.js,common.js')
+ */
+exports.init_js = function(jsList, isDebug){
+    const _isDebug = !!isDebug || false;
+    let _jsLinks = '';
+    const _jsMap = exports.getMap('js');
+    const _jsPath = exports.getStaticPath('js', _isDebug);
+    const _arr = jsList.split(',');
+    const _timestamp = String(new Date().getTime()).substr(0, 8);
+
+    const _buildSrcLink = function(key){
+        let _link = '';
+        const _modName = key;
+        _link = '<script src="//' + _jsPath + '/' + _modName +'"></script>';
+        return _link;
+    };
+
+    const _buildDistLink = function(key){
+        let _link = '';
+        let _val = key;
+        _val = _.has(_jsMap, _val) ? _jsMap[_val] : _val + '?=' + _timestamp;
+        _link += '<script src="//' + _jsPath + '/' + _val +'"></script>';
+        return _link;
+    };
+
+    _arr.forEach(function(key){
+        let _key = key;
+        _key = 'js/' + _key;
+        if(_env !== 'local'){
+            _jsLinks += _isDebug ? _buildSrcLink(_key) : _buildDistLink(_key);
+        }else{
+            _jsLinks += _isDebug ? _buildDistLink(_key) : _buildSrcLink(_key);
+        }
+    });
+
+    return _jsLinks;
+};
+
 /*
  * 构造img 资源路径
  * @param {string} imgName 图片名
