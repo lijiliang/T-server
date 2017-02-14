@@ -11,6 +11,13 @@ const _controllerPath = '../'+ setting.path.controller +'/';
 const controllerMain = {
     init: (router) => {
         const _self = controllerMain;
+
+        //代理接口请求
+        router.all('/proxy/:act/:op/',function* (){
+            //判断是否是接口
+            yield _self.runController.bind(this)('proxy');
+        });
+
         //首页
         router.get('/', function* (){
             yield _self.runController.bind(this)('index');
