@@ -11,8 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="renderer" content="webkit|ie-stand">
 
-    <%-init_css('aaa.css,common.css,index.css')%>
-    <%-init_js('react.js,jquery.js,index.js')%>
+    <%-init_css('common.css,index.css')%>
 </head>
 <body>
     <!-- <div id="index"></div> -->
@@ -44,7 +43,8 @@
             </ul>
         </div>
     </div>
-    <script type="text/javascript">
+    <%-init_js('react.js,jquery.js')%>
+<script type="text/javascript">
     var _ie = window.navigator.userAgent;
     var agentID = _ie.match(/(MSIE 9.0|MSIE 8.0|MSIE 7.0)/i);
     if(agentID){
@@ -52,5 +52,6 @@
     }
 </script>
 
+    <%-init_js('index.js')%>
 </body>
 </html>

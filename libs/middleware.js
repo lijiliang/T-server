@@ -22,6 +22,11 @@ module.exports = () => {
         //拿到cookie
         this.cookie = cookie.parse(this.headers.cookie || '');
 
+        // 示例：调用api  yield helper.getApiData.bind(this)('get', 'login', 'info', {token:this.cookie.atKey},{});
+        // let memberInfo= {data:{}};
+        // memberInfo = yield helper.getApiData.bind(this)('get', 'login', 'info', {token:'af63138fec8f4af790cdd11dd7fdc087'},{});
+        // memberInfo = JSON.parse(memberInfo.toString());
+
         this._data = {
             query:this.request.query,
             uuid: this.session.uuid,
