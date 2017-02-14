@@ -4,6 +4,7 @@
 const tpl = require('./tpl');
 const helper = require('./helper');
 const log4js = require('log4js');
+const cookie = require('cookie');
 const logger = log4js.getLogger('router');
 
 module.exports = () => {
@@ -17,10 +18,15 @@ module.exports = () => {
             post: this.request.body
         }),this.headers['user-agent']);
 
+        const ip = helper.getIp(this.request);
+        //拿到cookie
+        this.cookie = cookie.parse(this.headers.cookie || '');
+
         this._data = {
             query:this.request.query,
             uuid: this.session.uuid,
             cookie:this.cookie,
+            ip: ip,
             isDebug: function(){
                 return this.query.is_debug ? !!this.query.is_debug : false;
             },
