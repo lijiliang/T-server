@@ -9,7 +9,7 @@ const config = require('./config');
 //const staticUrl = `//${domainPrefix}${config.domain.static}/debug/`;
 const staticUrl = '/debug/';
 const srcPath = config.path.src;
-
+ 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (_file) => {
