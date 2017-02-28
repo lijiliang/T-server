@@ -32,7 +32,7 @@ npm run build
 | npm run core:dev   | 根据`webpack.core.js`,build出一份开发环境的公共资源代码 |
 | npm run core:build   | 根据`webpack.core.js`,build出一份生产环境的公共资源代码 |
 
-## config.yml 根据自己需求修改生成路径及网址
+config.yml 根据自己需求修改生成路径及网址
 ```
 env: 'local'     #当前开发环境
 apiEnv: 'test'   # api环境
@@ -59,7 +59,6 @@ sessionKey: 'tServer'  # koa sessionKey
 目录结构如下：
 ```
 T-server
-│
 ├─bin                                       //服务端执行脚本
 │  ├─run.sh                                     //运行
 │  └─stop.sh                                    //中止
