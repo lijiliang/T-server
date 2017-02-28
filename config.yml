@@ -17,4 +17,4 @@ path:
 appJsPath: 'app'    # js源文件目录
 htmlViews: './views' # 视图文件夹名称
 mapPath: './views/map' # map文件夹名称
-sessionKey: 'tServer'  # koa sessionKey
+sessionKey: 'tServer'  # koa sessionKey 
