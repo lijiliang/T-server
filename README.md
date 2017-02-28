@@ -33,6 +33,28 @@ npm run build
 | npm run core:build   | 根据`webpack.core.js`,build出一份生产环境的公共资源代码 |
 
 ## config.yml 根据自己需求修改生成路径及网址
+```
+env: 'local'     #当前开发环境
+apiEnv: 'test'   # api环境
+port: 3001       # 服务器端口
+jsPrefix: 'tServer.'
+domain:
+    admin: 'atool.didadi.fm'    # 网站网址
+    pc: 'atool.didadi.fm'    # 网站网址
+    m: 'tools.didadi.fm'    # 移动端网站网址
+    api: 'tool.api.didadi.fm'        # api调用网址
+    static: 'atool.didadi.fm'   # 静态目录
+path:
+    controller: 'controllers'  # 控制器文件夹
+    view: 'views'
+    src: './statics/src'       # 静态源文件
+    debug: './statics/debug'   # 静态生成的开发文件
+    dist: './statics/dist'     # 静态生成的正式文件
+appJsPath: 'app'    # js源文件目录
+htmlViews: './views' # 视图文件夹名称
+mapPath: './views/map' # map文件夹名称
+sessionKey: 'tServer'  # koa sessionKey
+```
 
 目录结构如下：
 ```
