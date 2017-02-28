@@ -8,8 +8,8 @@ const watch = require('gulp-watch');
 
 const webpack = require('gulp-webpack');
 const fileinclude = require('gulp-file-include');
-const named = require('vinyl-named');
 const rename = require('gulp-rename');
+const named = require('vinyl-named');
 
 /*设置相关*/
 const config = require('./config');
