@@ -2,10 +2,38 @@
 <html lang="en">
 <head>
     @@include("./_common/header.html")
-    <%-init_css('antd.css,index.css')%>
+    <%-init_css('common.css,index.css')%>
 </head>
 <body>
-    <div id="index"></div>
+    <!-- <div id="index"></div> -->
+    <div id="app">
+        <header class="header header-flex">
+            <h1 class="title">node抓取cNode首页数据</h1>
+        </header>
+        <div class="container">
+            <ul>
+                <%list.map((item, index)=>{%>
+                <li data-url="<%=item.avatar%>" class="item">
+                    <div class="item-user-bar">
+                        <div class="avatar-cover avatar-loaded">
+                            <div class="avatar" style="background-image: url('<%-item.avatar%>')"></div>
+                        </div>
+                        <div class="item-detail"><span class="username"><%=item.userName%></span>
+                            <p class="item-time">
+                                <%=item.lastTime%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <a href="https://cnodejs.org<%=item.href%>" class="item-link">
+                            <p class="item-content-title"><%=item.title%></p>
+                        </a>
+                    </div>
+                </li>
+                <%})%>
+            </ul>
+        </div>
+    </div>
     @@include('./_common/footer.html')
     <%-init_js('index.js')%>
 </body>

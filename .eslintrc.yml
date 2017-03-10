@@ -75,7 +75,7 @@ rules: #规则
     import/newline-after-import: 0 #引入模块后需要新一行（空的）  这里取消验证
     import/no-extraneous-dependencies: #使用require时分析package.json 一般只 require('lodash') 这样的情况，默认是分析package.json 的dependencies
         - 2
-        - 
+        -
             devDependencies: true #开启devDependencies 的支持
     dot-notation: 0 #要求使用点号，对象的属性使用中要 obj.a 而不是obj['a'] 这里取消验证
     guard-for-in: 0 #要求 for-in 循环中有一个 if 语句 这里取消验证
