@@ -33,6 +33,9 @@ const controllerMain = {
         router.get('/book/dir/:id/:sid', function* (){  // 小说目录
             yield _self.runController.bind(this)('book/dir');
         });
+        router.get('/book/show/:id/:sid/:aid', function* (){  // 详情页
+            yield _self.runController.bind(this)('book/show');
+        });
 
         //用户中心
         router.get('/user/:id', function* (){

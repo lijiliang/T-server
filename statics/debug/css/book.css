@@ -153,3 +153,15 @@
   text-overflow: ellipsis;
   padding: 0 0.2rem;
 }
+.m-show {
+  background: #fff;
+}
+.m-show .show-cnt {
+  padding: 0.2rem;
+  font-size: 0.3rem;
+}
+.m-show .show-cnt p {
+  padding: 0.08rem 0;
+  line-height: 1.6;
+  text-indent: 2em;
+}
