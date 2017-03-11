@@ -95,3 +95,61 @@
   color: #999;
   font-size: 0.26rem;
 }
+.m-info {
+  background: #fff;
+  margin-top: 0.2rem;
+  border-bottom: 1px solid #eee;
+  padding: 0.2rem;
+}
+.m-info .info-thumb {
+  width: 2rem;
+  float: left;
+  margin-right: 0.2rem;
+}
+.m-info .info-thumb img {
+  display: block;
+  width: 2rem;
+  min-height: 2.2rem;
+}
+.m-info .info-text h1 {
+  line-height: 1.8;
+  font-size: 0.3rem;
+  font-weight: bold;
+}
+.m-info .info-text li {
+  font-size: 0.24rem;
+  line-height: 1.7;
+}
+.m-intro {
+  border-bottom: 1px solid #ddd;
+}
+.m-intro .intro-cnt {
+  background: #fff;
+  font-size: 0.28rem;
+  padding: 0.2rem;
+  line-height: 1.5;
+}
+.m-dir .m-dir-tit {
+  height: 0.75rem;
+  padding-left: 0.2rem;
+  line-height: 0.75rem;
+  font-size: 0.28rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+.m-dir .dir-list {
+  background: #fff;
+}
+.m-dir .dir-list li {
+  height: 0.68rem;
+  line-height: 0.68rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.28rem;
+}
+.m-dir .dir-list li a {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 0.2rem;
+}

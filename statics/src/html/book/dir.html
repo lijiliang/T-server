@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include("../_common/header.html")
+    <%-init_css('common.css,book.css')%>
+</head>
+<body>
+    <header class="nav-bar">
+        <a href="javascript:history.go(-1);" class="top-back"></a>
+        <h1 class="bar-title"><%=title%></h1>
+    </header>
+    <section class="container">
+        <div class="m-info clearfix">
+            <div class="info-thumb">
+                <img src="<%=info.thumb%>" alt="<%=info.name%>">
+            </div>
+            <div class="info-text">
+                <h1><%=info.name%></h1>
+                <ul>
+                    <li><%=info.author%></li>
+                    <li><%=info.sorts%></li>
+                    <li><%=info.start%></li>
+                    <li><%=info.update%></li>
+                    <li><%=info.newest%></li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-intro">
+            <div class="intro-cnt">
+                <%=info.introInfo%>
+            </div>
+        </div>
+        <div class="m-dir">
+            <div class="m-dir-tit">目录</div>
+            <ul class="dir-list">
+                <% list.map((item, index)=> {%>
+                <li><a href="/book/show/<%=item.id%>/<%=item.sid%>/<%=item.aid%>"><%=item.name%></a></li>
+                <%})%>
+            </ul>
+        </div>
+
+
+    </section>
+    @@include('../_common/footer.html')
+</body>
+</html>

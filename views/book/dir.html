@@ -20,23 +20,36 @@
         <h1 class="bar-title"><%=title%></h1>
     </header>
     <section class="container">
-        <ul class="m-list">
-            <% list.map((item, index)=> {%>
-            <li class="list-item">
-                <a href="/book/dir/<%=item.sid%>/<%=item.listId%>"><%=item.name%><span class="author">/<%=item.author%></span></a>
-            </li>
-            <%})%>
-        </ul>
-        <div class="m-page">
-            <div class="page">
-                <a href="/sort/1_1/">首页</a>
-                <a href="/sort/1_2/">上页</a>
-                <a href="/sort/1_4/">下页</a>
-                <a href="/sort/1_97/">尾页</a>
+        <div class="m-info clearfix">
+            <div class="info-thumb">
+                <img src="<%=info.thumb%>" alt="<%=info.name%>">
             </div>
-            <div class="page">输入页数<input id="pageinput" size="4" /><input type="button" value="跳转" onclick = "page()" /> <br/>(第<%=data.curpage%>/<%=data.total%>页)当前<%=data.pageSize%>条/页</div>
-
+            <div class="info-text">
+                <h1><%=info.name%></h1>
+                <ul>
+                    <li><%=info.author%></li>
+                    <li><%=info.sorts%></li>
+                    <li><%=info.start%></li>
+                    <li><%=info.update%></li>
+                    <li><%=info.newest%></li>
+                </ul>
+            </div>
         </div>
+        <div class="m-intro">
+            <div class="intro-cnt">
+                <%=info.introInfo%>
+            </div>
+        </div>
+        <div class="m-dir">
+            <div class="m-dir-tit">目录</div>
+            <ul class="dir-list">
+                <% list.map((item, index)=> {%>
+                <li><a href="/book/show/<%=item.id%>/<%=item.sid%>/<%=item.aid%>"><%=item.name%></a></li>
+                <%})%>
+            </ul>
+        </div>
+
+
     </section>
     <%-init_js('react.js,jquery.js')%>
 <script type="text/javascript">

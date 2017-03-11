@@ -17,6 +17,16 @@
             </li>
             <%})%>
         </ul>
+        <div class="m-page">
+            <div class="page">
+                <a href="/sort/1_1/">首页</a>
+                <a href="/sort/1_2/">上页</a>
+                <a href="/sort/1_4/">下页</a>
+                <a href="/sort/1_97/">尾页</a>
+            </div>
+            <div class="page">输入页数<input id="pageinput" size="4" /><input type="button" value="跳转" onclick = "page()" /> <br/>(第<%=data.curpage%>/<%=data.total%>页)当前<%=data.pageSize%>条/页</div>
+
+        </div>
     </section>
     @@include('../_common/footer.html')
 </body>
