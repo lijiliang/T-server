@@ -1,0 +1,97 @@
+/*------------------------------------------------
+@Filename:  book.less
+@Description:   小说样式
+@Version:   1.0.0(2017-03-11)
+@author:    LJL
+@updatatime:
+------------------------------------------------*/
+/*------------------------------------------------
+@Filename:  variables.less
+@Description:   variables (可定义一些常用的变量，如颜色值或字体大小...)
+@Version:   1.0.0(2017-03-11)
+@author:    LJL
+@updatatime:
+------------------------------------------------*/
+/* ###### 颜色定义开始 ###### */
+/*提醒*/
+/*强调/警告*/
+/* 边框颜色 */
+/* 全站字体颜色 */
+/*通用*/
+/*正文*/
+/*通用浅色*/
+/*标题*/
+/*说明*/
+/*价格*/
+/* 全站链接颜色 */
+/* 常用链接颜色 */
+/* ------神爸标准颜色------ */
+/*logo色：青绿*/
+/*绿*/
+/*logo色：橙*/
+/*嫣红*/
+/*铅白*/
+/* ------调色板------ */
+/*白*/
+/*鱼肚白*/
+/*铅白*/
+/*红*/
+/*嫣红*/
+/*深红*/
+/*暗红*/
+/*浅红*/
+/*品红*/
+/*粉红*/
+/*浅黄*/
+/*橙*/
+/*橘黄*/
+/*绿*/
+/*浅紫*/
+/*丁香紫*/
+/*黛蓝*/
+/*灰7%*/
+/*灰12%*/
+/*灰14%*/
+/*灰20%*/
+/*灰25%*/
+/*灰30%*/
+/*灰37%*/
+/*灰45%*/
+/*灰53%*/
+/*灰95%*/
+/*黑*/
+/* ###### 颜色定义结束 ###### */
+/* 定义rem */
+.m-catalog {
+  margin-top: 0.2rem;
+}
+.m-catalog .list-item {
+  width: 42%;
+  display: inline-block;
+  margin: 0.2rem 2%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  border-radius: 99px;
+  text-align: center;
+}
+.m-catalog .list-item a {
+  font-size: 0.28rem;
+  padding-left: 0.2rem;
+}
+.m-list .list-item {
+  margin-top: .2rem;
+  height: 0.68rem;
+  line-height: 0.68rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  font-size: 0.28rem;
+}
+.m-list .list-item a {
+  padding-left: 0.2rem;
+}
+.m-list .list-item .author {
+  color: #999;
+  font-size: 0.26rem;
+}

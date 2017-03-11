@@ -22,6 +22,15 @@ const controllerMain = {
         router.get('/', function* (){
             yield _self.runController.bind(this)('index');
         });
+
+        // 小说
+        router.get('/book', function* (){  // 首页
+            yield _self.runController.bind(this)('book/index');
+        });
+        router.get('/book/list/:id/:sid', function* (){  // 列表
+            yield _self.runController.bind(this)('book/list');
+        });
+
         //用户中心
         router.get('/user/:id', function* (){
             yield _self.runController.bind(this)('user');

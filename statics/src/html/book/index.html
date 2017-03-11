@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include("../_common/header.html")
+    <%-init_css('common.css,book.css')%>
+</head>
+<body>
+    <header class="nav-bar">
+        <a href="javascript:history.go(-1);" class="top-back"></a>
+        <h1 class="bar-title">分类列表</h1>
+    </header>
+    <section class="container">
+        <ul class="m-catalog">
+            <%list.map((item, index)=>{%>
+            <li class="list-item"><a href="/book/list/<%=item.id%>/1"><%=item.text%></a></li>
+            <%})%>
+        </ul>
+    </section>
+    @@include('../_common/footer.html')
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<base target="_self">
+<title><%=title%></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit|ie-stand">
+<script> (function (doc, win) { var doc = document; var win = window; var docEl = doc.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'; var recalc = function() { var clientWidth = docEl.clientWidth; if (!clientWidth) return; var fZ = 100 * (clientWidth / 750); if (fZ >= 100) { docEl.style.fontSize = 100 + 'px'; } else if (fZ <= 42) { docEl.style.fontSize = 42 + 'px'; } else { docEl.style.fontSize = fZ + 'px'; } }; recalc(); if (!doc.addEventListener) return; win.addEventListener(resizeEvt, recalc, false); doc.addEventListener('DOMContentLoaded', recalc, false); })(document, window);</script>
+
+    <%-init_css('common.css,book.css')%>
+</head>
+<body>
+    <header class="nav-bar">
+        <a href="javascript:history.go(-1);" class="top-back"></a>
+        <h1 class="bar-title"><%=title%></h1>
+    </header>
+    <section class="container">
+        <ul class="m-list">
+            <% list.map((item, index)=> {%>
+            <li class="list-item">
+                <a href="/book/dir/<%=item.sid%>/<%=item.listId%>"><%=item.name%><span class="author">/<%=item.author%></span></a>
+            </li>
+            <%})%>
+        </ul>
+    </section>
+    <%-init_js('react.js,jquery.js')%>
+<script type="text/javascript">
+    var _ie = window.navigator.userAgent;
+    var agentID = _ie.match(/(MSIE 9.0|MSIE 8.0|MSIE 7.0)/i);
+    if(agentID){
+        window.location.href="/browser";
+    }
+</script>
+
+</body>
+</html>
