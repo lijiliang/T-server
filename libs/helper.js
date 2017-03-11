@@ -10,7 +10,6 @@
  const _env = setting.env;
  const _domain = setting.domain;
  const _stPath = setting.staticUrl;
-
 /*
  * @description: 根据api获取数据
  * @param: method {string} 获取类型

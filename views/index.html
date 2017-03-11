@@ -10,11 +10,11 @@
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="renderer" content="webkit|ie-stand">
+<script> (function (doc, win) { var doc = document; var win = window; var docEl = doc.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'; var recalc = function() { var clientWidth = docEl.clientWidth; if (!clientWidth) return; var fZ = 100 * (clientWidth / 750); if (fZ >= 100) { docEl.style.fontSize = 100 + 'px'; } else if (fZ <= 42) { docEl.style.fontSize = 42 + 'px'; } else { docEl.style.fontSize = fZ + 'px'; } }; recalc(); if (!doc.addEventListener) return; win.addEventListener(resizeEvt, recalc, false); doc.addEventListener('DOMContentLoaded', recalc, false); })(document, window);</script>
 
     <%-init_css('common.css,index.css')%>
 </head>
 <body>
-    <!-- <div id="index"></div> -->
     <div id="app">
         <header class="header header-flex">
             <h1 class="title">node抓取cNode首页数据</h1>
