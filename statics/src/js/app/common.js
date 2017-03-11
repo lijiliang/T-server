@@ -1,6 +1,7 @@
 /*
  *@description 公用方法
 */
+import '../../less/common.less';
 import ajaxData from '../_base/ajaxData';
 import cookie from '../_base/cookie';
 import goLogin from '../_base/goLogin';

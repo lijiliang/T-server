@@ -46,6 +46,8 @@
 
 	'use strict';
 
+	__webpack_require__(8);
+
 	var _ajaxData = __webpack_require__(1);
 
 	var _ajaxData2 = _interopRequireDefault(_ajaxData);
@@ -75,10 +77,10 @@
 	//     checkMember: checkMember,
 	//     dateFormat: dateFormat
 	// };
-	window.cookie = _cookie2["default"]; /*
-	                                   *@description 公用方法
-	                                  */
-
+	/*
+	 *@description 公用方法
+	*/
+	window.cookie = _cookie2["default"];
 	window.ajaxData = _ajaxData2["default"];
 	window.goLogin = _goLogin2["default"];
 	window.checkMember = _checkMember2["default"];
@@ -461,6 +463,13 @@
 	        });
 	}
 	module.exports = dateFormat;
+
+/***/ },
+/* 7 */,
+/* 8 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

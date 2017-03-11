@@ -143,7 +143,7 @@ exports.init_css = function(cssList, isDebug){
         }else{
             _value = key + '?t=' + _timestamp;
         }
-        _cssLinks = '<link href="//'+ _cssPath +'/' + _value + '" rel="stylesheet" type="text/css" />';
+        _cssLinks += '<link href="//'+ _cssPath +'/' + _value + '" rel="stylesheet" type="text/css" />';
     });
     // return _cssLinks;
     return _cssLinks + exports.getGloabconsts(_isDebug);
@@ -197,17 +197,17 @@ exports.init_js = function(jsList, isDebug){
  * @example
  * init_img('logo.png')
  */
-exports.init_img = function(imgName, isDebug){
-    const _isDebug = !!isDebug || false;
-    const _imgMap = exports.getMap('img');
-    const _imgPath = exports.getStaticPath('img', _isDebug);
-    const _timestamp = String(new Date().getTime()).substr(0, 8);
-    const _imgName ='img/'+imgName;
-    let _val = null;
-    if(_env !== 'local' && !_isDebug && _.has(_imgPath, _imgName)){
-        _val = _imgMap[_imgName];
-    }else{
-        _val = _imgName + '?t=' + _timestamp;
-    }
-    return '//' + _imgPath + '/' + _val;
-};
+ exports.init_img = function(imgName, isDebug){
+     const _isDebug = !!isDebug || false;
+     const _imgMap = exports.getMap('img');
+     const _imgPath = exports.getStaticPath('img', _isDebug);
+     const _timestamp = String(new Date().getTime()).substr(0, 8);
+     const _imgName ='img/'+imgName;
+     let _val = null;
+     if(_env !== 'local' && !_isDebug && _.has(_imgPath, _imgName)){
+         _val = _imgMap[_imgName];
+     }else{
+         _val = _imgName + '?t=' + _timestamp;
+     }
+     return '//' + _imgPath + '/' + _val;
+ };

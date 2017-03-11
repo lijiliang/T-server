@@ -48,8 +48,6 @@
 
 	__webpack_require__(1);
 
-	console.log('asdfasdf');
-
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
