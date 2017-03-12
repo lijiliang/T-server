@@ -21,6 +21,8 @@
              description: '',
              title: '首页'
          },//seo 信息
+         id: id,
+         sid: sid,
          title: responseJson.data[0].type,
          list: list,
          data: responseJson,

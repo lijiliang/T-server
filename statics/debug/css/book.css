@@ -95,6 +95,26 @@
   color: #999;
   font-size: 0.26rem;
 }
+.m-page .page {
+  height: auto;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+.m-page .page a {
+  text-align: center;
+  padding: 0.12rem 0.35rem;
+  margin: 0 0.08rem;
+  border-radius: 3px;
+  background: #2A7CE7;
+  color: #fff;
+}
+.m-page .page-info {
+  padding: 0.1rem 0;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.6rem;
+  color: #999;
+}
 .m-info {
   background: #fff;
   margin-top: 0.2rem;
