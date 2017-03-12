@@ -38,15 +38,15 @@ npm run build
 
 ```
 env: 'local'     #当前开发环境
-apiEnv: 'test'   # api环境
+apiEnv: 'www'   # api环境
 port: 3001       # 服务器端口
 jsPrefix: 'tServer.'
 domain:
-    admin: 'atool.didadi.fm'    # 网站网址
-    pc: 'atool.didadi.fm'    # 网站网址
-    m: 'tools.didadi.fm'    # 移动端网站网址
-    api: 'tool.api.didadi.fm'        # api调用网址
-    static: 'atool.didadi.fm'   # 静态目录
+    admin: 's.youmeixun.com'    # 网站网址
+    pc: 's.youmeixun.com'    # 网站网址
+    m: 's.youmeixun.com'    # 移动端网站网址
+    api: 'api.youmeixun.com'        # api调用网址
+    static: 's.youmeixun.com'   # 静态目录
 path:
     controller: 'controllers'  # 控制器文件夹
     view: 'views'
