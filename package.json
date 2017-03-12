@@ -38,7 +38,7 @@
     "lodash": "^4.10.0",
     "log4js": "^1.0.1",
     "map-webpack-plugin": "^0.0.6",
-    "iconv-lite": "^0.4.15",
+    "iconv-lite": "^0.4.15"
   },
   "devDependencies": {
     "antd": "^2.6.0",

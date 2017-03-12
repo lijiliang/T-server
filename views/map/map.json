@@ -1,10 +1,13 @@
 {
   "js": {
-    "js/common.js": "js/common.963110.js",
-    "js/index.js": "js/index.a8bbc3.js"
+    "js/book.js": "js/book.168842.js",
+    "js/common.js": "js/common.3ffabc.js",
+    "js/index.js": "js/index.16bf22.js"
   },
   "css": {
-    "css/index.css": "css/index.a8bbc3.css"
+    "css/book.css": "css/book.168842.css",
+    "css/common.css": "css/common.3ffabc.css",
+    "css/index.css": "css/index.16bf22.css"
   },
   "img": {},
   "other": {}
