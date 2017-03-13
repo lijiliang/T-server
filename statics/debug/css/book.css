@@ -66,7 +66,7 @@
   margin-top: 0.2rem;
 }
 .m-catalog .list-item {
-  width: 42%;
+  width: 45%;
   display: inline-block;
   margin: 0.2rem 2%;
   background-color: #fff;
@@ -184,4 +184,25 @@
   padding: 0.08rem 0;
   line-height: 1.6;
   text-indent: 2em;
+}
+.show-page {
+  width: 100%;
+  height: auto;
+}
+.show-page a {
+  display: inline-block;
+  float: left;
+  width: 36%;
+  text-align: center;
+  background: #2A7CE7;
+  height: 0.68rem;
+  line-height: 0.68rem;
+  color: #fff;
+  box-sizing: border-box;
+}
+.show-page a.show-dir {
+  width: 28%;
+  border: 1px solid #e3e3e3;
+  border-top: none;
+  border-bottom: none;
 }

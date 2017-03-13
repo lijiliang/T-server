@@ -27,7 +27,15 @@
                 <%})%>
             </div>
         </div>
-
+        <div class="show-page">
+            <%if(other.previd != other.sid){%>
+            <a href="/book/show/<%=other.id%>/<%=other.sid%>/<%=other.previd%>">上一章</a>
+            <%}%>
+            <a href="/book/dir/<%=other.id%>/<%=other.sid%>" class="show-dir">目录</a>
+            <%if(other.nextid != other.sid){%>
+            <a href="/book/show/<%=other.id%>/<%=other.sid%>/<%=other.nextid%>">下一章</a>
+            <%}%>
+        </div>
     </section>
 </body>
 </html>

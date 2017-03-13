@@ -14,10 +14,13 @@
      const responseJson = JSON.parse(iconv.decode(response, 'UTF-8'));
      let data = {};
      let list = [];
+     let other = {};
      if(responseJson.code === 0){
          data = responseJson.data;
          list = data.content.split(/\s{4}/g);
+         other = data.other;
      }
+     console.log(other)
      this.render({
          seo_info: {
              keywords: '',
@@ -26,6 +29,7 @@
          },//seo 信息
          title: data.title || '详情页',
          list: list,
+         other: other,
      }, 'book/show');
      return next;
  };
