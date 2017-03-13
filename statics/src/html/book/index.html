@@ -10,11 +10,17 @@
         <h1 class="bar-title">分类列表</h1>
     </header>
     <section class="container">
+        <div class="search">
+            <input autocomplete="off" class="s-value">
+            <div class="search-btn">搜索</div>
+        </div>
         <ul class="m-catalog">
             <%list.map((item, index)=>{%>
             <li class="list-item"><a href="/book/list/<%=item.id%>/1"><%=item.text%></a></li>
             <%})%>
         </ul>
     </section>
+    @@include("../_common/footer.html")
+    <%-init_js('book.js')%>
 </body>
 </html>

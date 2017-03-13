@@ -36,6 +36,12 @@ const controllerMain = {
         router.get('/book/show/:id/:sid/:aid', function* (){  // 详情页
             yield _self.runController.bind(this)('book/show');
         });
+        router.get('/book/search', function* (){  // 搜索页
+            yield _self.runController.bind(this)('book/search');
+        });
+        router.get('/book/sapi', function* (){  // 搜索页api
+            yield _self.runController.bind(this)('book/sapi');
+        });
 
         //用户中心
         router.get('/user/:id', function* (){

@@ -6,12 +6,39 @@
 @updatatime:
 ------------------------------------------------*/
 @import "./variables.less";
+@import "./layer.less";
+.search{
+    padding: 50/@rem 20/@rem 20/@rem;
+    input{
+        display: inline-block;
+        width: 72%;
+        margin-right: 4%;
+        border:1px solid #eee;
+        padding: 0 12/@rem;
+        line-height: 68/@rem;
+        border-radius: 10/@rem;
+        font-size: 26/@rem;
+        color: #666;
+        box-sizing: border-box;
+    }
+    .search-btn{
+        display: inline-block;
+        width: 22%;
+        background:#2A7CE7;
+        height: 68/@rem;
+        line-height: 68/@rem;
+        border-radius: 10/@rem;
+        font-size: 30/@rem;
+        text-align: center;
+        color: #fff;
+    }
+}
 .m-catalog{
     margin-top: 20/@rem;
     .list-item{
         width: 45%;
         display: inline-block;
-        margin: 20/@rem 2%;
+        margin: 28/@rem 2%;
         background-color: #fff;
         border-bottom: 1px solid #eee;
         height: 60/@rem;
@@ -164,6 +191,38 @@
             border: 1px solid #e3e3e3;
             border-top:none;
             border-bottom:none;
+        }
+    }
+}
+
+// 搜索
+.m-search{
+    .info-item{
+        display: block;
+        background: #fff;
+        margin-top: 20/@rem;
+        border-bottom: 1px solid #ddd;
+        padding: 20/@rem;
+        .info-thumb{
+            width: 200/@rem;
+            float: left;
+            margin-right: 20/@rem;
+            img{
+                display: block;
+                width: 200/@rem;
+                min-height: 220/@rem;
+            }
+        }
+        .info-text{
+            stong{
+                line-height: 2;
+                font-size: 32/@rem;
+                font-weight: bold;
+            }
+            li{
+                font-size: 24/@rem;
+                line-height: 1.8;
+            }
         }
     }
 }

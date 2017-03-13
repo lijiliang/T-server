@@ -20,7 +20,6 @@
          list = data.content.split(/\s{4}/g);
          other = data.other;
      }
-     console.log(other)
      this.render({
          seo_info: {
              keywords: '',

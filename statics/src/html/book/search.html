@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include("../_common/header.html")
+    <%-init_css('common.css,book.css')%>
+</head>
+<body>
+    <header class="nav-bar">
+        <a href="javascript:history.go(-1);" class="top-back"></a>
+        <h1 class="bar-title"><%=title%></h1>
+    </header>
+    <section class="container">
+        <div id="search"></div>
+    </section>
+    @@include("../_common/footer.html")
+    <%-init_js('book_search.js')%>
+</body>
+</html>

@@ -1,13 +1,14 @@
 {
   "js": {
-    "js/book.js": "js/book.9a29cb.js",
-    "js/common.js": "js/common.3ffabc.js",
-    "js/index.js": "js/index.16bf22.js"
+    "js/book.js": "js/book.44bf21.js",
+    "js/book_search.js": "js/book_search.8e3bb1.js",
+    "js/common.js": "js/common.fed994.js",
+    "js/index.js": "js/index.3676fc.js"
   },
   "css": {
-    "css/book.css": "css/book.9a29cb.css",
-    "css/common.css": "css/common.3ffabc.css",
-    "css/index.css": "css/index.16bf22.css"
+    "css/book.css": "css/book.44bf21.css",
+    "css/common.css": "css/common.fed994.css",
+    "css/index.css": "css/index.3676fc.css"
   },
   "img": {},
   "other": {}
