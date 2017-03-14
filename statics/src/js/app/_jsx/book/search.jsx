@@ -5,6 +5,7 @@
 import queryString from '../../../_base/getQueryString';
 import infiniteScroll from '../../../_base/infiniteScroll';
 import layer from '../../../_base/layer';
+import cookie from '../../../_base/cookie';
 let _page = 0;
 let _q = null;
 let loadId = {};
@@ -27,7 +28,7 @@ class Search extends React.Component {
             url: 'http://s.youmeixun.com/book/sapi',
             type: 'get',
             data: {
-                q: encodeURIComponent(_q),
+                q: $.cookie('q') || encodeURIComponent(_q),
                 page: page
             },
             dataType: 'json',

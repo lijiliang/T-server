@@ -11,7 +11,7 @@
              description: '',
              title: '搜索'
          },//seo 信息
-         title: '搜索页',
+         title: this.query.q + '-搜索结果' || '搜索页',
      }, 'book/search');
      return next;
  };

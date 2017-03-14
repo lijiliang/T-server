@@ -1,13 +1,13 @@
 {
   "js": {
-    "js/book.js": "js/book.44bf21.js",
-    "js/book_search.js": "js/book_search.8e3bb1.js",
-    "js/common.js": "js/common.fed994.js",
+    "js/book.js": "js/book.009f88.js",
+    "js/book_search.js": "js/book_search.16c5f1.js",
+    "js/common.js": "js/common.b73cb4.js",
     "js/index.js": "js/index.3676fc.js"
   },
   "css": {
-    "css/book.css": "css/book.44bf21.css",
-    "css/common.css": "css/common.fed994.css",
+    "css/book.css": "css/book.009f88.css",
+    "css/common.css": "css/common.b73cb4.css",
     "css/index.css": "css/index.3676fc.css"
   },
   "img": {},
